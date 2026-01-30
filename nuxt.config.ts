@@ -162,7 +162,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'static',
+    preset: 'node-server',
     output: {
       dir: 'output',
       serverDir: 'output/server',
