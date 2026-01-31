@@ -9,22 +9,23 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, message: 'Nome e Telefono sono obbligatori' })
   }
 
-  const smtpHost = process.env.SMTP_HOST || 'smtps.aruba.it'
-  const smtpUser = process.env.SMTP_USER || 'rec.monterotondo@smiledoc.it'
+  const smtpHost = process.env.SMTP_HOST || 'localhost'
+  const smtpPort = Number(process.env.SMTP_PORT || '25')
+  const smtpUser = process.env.SMTP_USER || ''
   const smtpPass = process.env.SMTP_PASS || ''
 
-  if (!smtpPass) {
-    console.warn('SMTP_PASS not configured, logging lead instead')
-    console.log('LEAD:', { Nome, Telefono, Servizio, Messaggio, Sorgente })
-    return { success: true, message: 'Lead registrato (SMTP non configurato)' }
+  const transportConfig: any = {
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    tls: { rejectUnauthorized: false }
   }
 
-  const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: 465,
-    secure: true,
-    auth: { user: smtpUser, pass: smtpPass }
-  })
+  if (smtpUser && smtpPass) {
+    transportConfig.auth = { user: smtpUser, pass: smtpPass }
+  }
+
+  const transporter = nodemailer.createTransport(transportConfig)
 
   const pagina = Sorgente || 'Homepage'
   const subject = `[DentistaMonterotondo] Nuova richiesta da ${pagina}`
@@ -41,7 +42,7 @@ export default defineEventHandler(async (event) => {
   `
 
   await transporter.sendMail({
-    from: `"Dentista Monterotondo" <${smtpUser}>`,
+    from: '"Dentista Monterotondo" <noreply@dentistamonterotondo.com>',
     to: 'rec.monterotondo@smiledoc.it',
     cc: 'direzione@smiledoc.it',
     subject,
