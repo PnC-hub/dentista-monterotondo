@@ -26,6 +26,9 @@
       </div>
     </header>
 
+    <!-- Cookie Banner -->
+    <CookieBanner />
+
     <!-- Main Content -->
     <main>
       <slot />
@@ -76,6 +79,13 @@
           </div>
         </div>
         <div class="footer-bottom">
+          <div class="footer-legal">
+            <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
+            <span>|</span>
+            <NuxtLink to="/cookie-policy">Cookie Policy</NuxtLink>
+            <span>|</span>
+            <a href="#" @click.prevent="resetCookieConsent">Gestisci Cookie</a>
+          </div>
           <p>Smiledoc S.r.l. - P.IVA 15131801001 - Via Monte Circeo 12, 00015 Monterotondo (RM)</p>
         </div>
       </div>
@@ -85,6 +95,11 @@
 
 <script setup lang="ts">
 const menuOpen = ref(false)
+
+function resetCookieConsent() {
+  localStorage.removeItem('cookie_consent')
+  window.location.reload()
+}
 </script>
 
 <style>
@@ -273,6 +288,26 @@ a:hover {
 
 .footer-links a:hover {
   color: var(--primary);
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.footer-legal a {
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-legal a:hover {
+  color: var(--primary);
+}
+
+.footer-legal span {
+  color: rgba(255,255,255,0.3);
 }
 
 .footer-bottom {

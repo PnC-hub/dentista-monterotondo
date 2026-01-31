@@ -72,7 +72,7 @@
       <div class="form-group form-consent">
         <label class="checkbox-label">
           <input type="checkbox" v-model="privacy" required>
-          <span>Acconsento al trattamento dei dati personali ai sensi del GDPR</span>
+          <span>Acconsento al trattamento dei dati personali ai sensi del <NuxtLink to="/privacy" target="_blank">GDPR</NuxtLink></span>
         </label>
       </div>
 
