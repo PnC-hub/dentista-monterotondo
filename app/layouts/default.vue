@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>Studio Dentistico Monterotondo - Via Monte Circeo 12, 00015 Monterotondo (RM)</p>
+          <p>Smiledoc S.r.l. - P.IVA 15131801001 - Via Monte Circeo 12, 00015 Monterotondo (RM)</p>
         </div>
       </div>
     </footer>
