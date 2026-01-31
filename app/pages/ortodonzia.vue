@@ -13,7 +13,7 @@
         <div class="hero-cta">
           <a href="tel:+390690623936" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            Prenota Consulenza Gratuita
+            Prenota una Consulenza
           </a>
         </div>
       </div>
@@ -97,7 +97,7 @@
               </li>
               <li>
                 <strong>Piano di Trattamento</strong>
-                <p>Presentazione delle opzioni terapeutiche e scelta della soluzione migliore.</p>
+                <p>Presentazione delle opzioni terapeutiche e scelta della soluzione più adatta.</p>
               </li>
               <li>
                 <strong>Fase Attiva</strong>
@@ -149,7 +149,7 @@
     <section class="cta-section">
       <div class="container">
         <h2>Vuoi un Sorriso Perfettamente Allineato?</h2>
-        <p>Prenota una consulenza gratuita per scoprire la soluzione ortodontica adatta a te</p>
+        <p>Prenota una consulenza per scoprire la soluzione ortodontica adatta a te</p>
         <a href="tel:+390690623936" class="btn btn-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Chiama 06 906 23 936
@@ -165,7 +165,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Ortodonzia a Monterotondo per adulti e bambini. Allineatori invisibili, apparecchi estetici, ortodonzia pediatrica. Prima visita gratuita. Chiama 06 906 23 936'
+      content: 'Ortodonzia a Monterotondo per adulti e bambini. Allineatori invisibili, apparecchi estetici, ortodonzia pediatrica. Chiama 06 906 23 936'
     }
   ]
 })

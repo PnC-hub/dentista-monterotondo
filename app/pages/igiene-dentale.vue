@@ -76,7 +76,7 @@
 
             <h3>Prevenzione: La Chiave per un Sorriso Sano</h3>
             <p>
-              La prevenzione e il modo migliore per evitare problemi dentali piu seri e costosi.
+              La prevenzione è il modo più efficace per evitare problemi dentali più seri e costosi.
               Raccomandiamo una seduta di igiene professionale ogni 6 mesi.
             </p>
             <ul class="feature-list">

@@ -179,7 +179,7 @@
 
           <p>Lo sbiancamento dentale professionale è un trattamento sicuro, efficace e in grado di trasformare radicalmente l'estetica del sorriso. La chiave del successo sta nella scelta di affidarsi a professionisti qualificati, che possano valutare accuratamente la vostra situazione e guidarvi verso il trattamento più adatto alle vostre esigenze.</p>
 
-          <p>Un sorriso luminoso non solo migliora l'aspetto estetico, ma può anche aumentare la fiducia in se stessi e l'autostima. Se state considerando lo sbiancamento dentale, vi invitiamo a prenotare una consulenza nel nostro studio a Monterotondo: valuteremo insieme il percorso migliore per ottenere il sorriso che avete sempre desiderato.</p>
+          <p>Un sorriso luminoso non solo migliora l'aspetto estetico, ma può anche aumentare la fiducia in se stessi e l'autostima. Se state considerando lo sbiancamento dentale, vi invitiamo a prenotare una consulenza nel nostro studio a Monterotondo: valuteremo insieme il percorso più adatto per ottenere il sorriso che avete sempre desiderato.</p>
 
           <div class="article-cta">
             <LeadForm variant="card" title="Desideri un Sorriso più Bianco?" subtitle="Prenota una Consulenza per lo Sbiancamento" button-text="Contattaci Ora" :show-message="true" source="/blog/sbiancamento-denti-professionale" />

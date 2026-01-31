@@ -19,17 +19,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'it' },
-      title: 'Dentista Monterotondo | Studio Dentistico Via Monte Circeo 12 | Prima Visita Gratuita',
+      title: 'Dentista Monterotondo | Studio Dentistico Via Monte Circeo 12 | Cure Dentali di Qualità',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Cerchi un dentista a Monterotondo? Studio dentistico in Via Monte Circeo 12 con tecnologie digitali avanzate. Implantologia, ortodonzia, igiene dentale. Prima visita gratuita. Chiama 06 906 23 936'
+          content: 'Cerchi un dentista a Monterotondo? Studio dentistico in Via Monte Circeo 12 con tecnologie digitali avanzate. Implantologia, ortodonzia, igiene dentale. Chiama 06 906 23 936'
         },
-        { name: 'keywords', content: 'dentista monterotondo, studio dentistico monterotondo, dentista via monte circeo, implantologia monterotondo, ortodonzia monterotondo, dentista roma nord, dentista mentana, dentista fonte nuova, igiene dentale monterotondo, prima visita gratuita dentista' },
-        { property: 'og:title', content: 'Dentista Monterotondo | Studio Dentistico | Prima Visita Gratuita' },
-        { property: 'og:description', content: 'Studio dentistico a Monterotondo in Via Monte Circeo 12. Implantologia, ortodonzia, igiene dentale con tecnologie digitali. Prima visita gratuita!' },
+        { name: 'keywords', content: 'dentista monterotondo, studio dentistico monterotondo, dentista via monte circeo, implantologia monterotondo, ortodonzia monterotondo, dentista roma nord, dentista mentana, dentista fonte nuova, igiene dentale monterotondo' },
+        { property: 'og:title', content: 'Dentista Monterotondo | Studio Dentistico | Cure Dentali di Qualità' },
+        { property: 'og:description', content: 'Studio dentistico a Monterotondo in Via Monte Circeo 12. Implantologia, ortodonzia, igiene dentale con tecnologie digitali avanzate. Chiama 06 906 23 936' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://dentistamonterotondo.com' },
         { property: 'og:locale', content: 'it_IT' },

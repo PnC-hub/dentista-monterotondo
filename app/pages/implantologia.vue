@@ -13,7 +13,7 @@
         <div class="hero-cta">
           <a href="tel:+390690623936" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            Prenota Consulenza Gratuita
+            Prenota una Consulenza
           </a>
         </div>
       </div>
@@ -77,7 +77,7 @@
             <h3>Il Percorso Implantare</h3>
             <ol class="step-list">
               <li>
-                <strong>Prima Visita Gratuita</strong>
+                <strong>Prima Visita Diagnostica</strong>
                 <p>Valutazione clinica e radiografica per stabilire l'idoneita all'implantologia.</p>
               </li>
               <li>
@@ -138,7 +138,7 @@
     <section class="cta-section">
       <div class="container">
         <h2>Hai Bisogno di un Impianto Dentale?</h2>
-        <p>Prenota una consulenza gratuita per valutare la soluzione migliore per te</p>
+        <p>Prenota una consulenza per valutare la soluzione più adatta alla tua situazione</p>
         <a href="tel:+390690623936" class="btn btn-white">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           Chiama 06 906 23 936
@@ -154,7 +154,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Implantologia a Monterotondo con tecnologia computer-guidata e TAC 3D. Impianti dentali di qualita, carico immediato, All-on-4. Prima consulenza gratuita. Chiama 06 906 23 936'
+      content: 'Implantologia a Monterotondo con tecnologia computer-guidata e TAC 3D. Impianti dentali di qualità, carico immediato, All-on-4. Chiama 06 906 23 936'
     }
   ]
 })
@@ -186,7 +186,7 @@ useSchemaOrg([
         name: 'Quanto costa un impianto dentale a Monterotondo?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Il costo di un impianto dentale varia in base alla complessita del caso. Offriamo una consulenza gratuita per valutare la situazione e fornire un preventivo personalizzato.'
+          text: 'Il costo di un impianto dentale varia in base alla complessità del caso. Contattaci per una consulenza personalizzata e un preventivo dettagliato.'
         }
       },
       {

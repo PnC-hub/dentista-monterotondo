@@ -86,6 +86,7 @@
             <span>|</span>
             <a href="#" @click.prevent="resetCookieConsent">Gestisci Cookie</a>
           </div>
+          <p>Direttore Sanitario: Dott. Piernatale Civero</p>
           <p>Smiledoc S.r.l. - P.IVA 15131801001 - Via Monte Circeo 12, 00015 Monterotondo (RM)</p>
         </div>
       </div>
