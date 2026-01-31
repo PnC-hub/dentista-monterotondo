@@ -490,6 +490,13 @@ useSchemaOrg([
   background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
