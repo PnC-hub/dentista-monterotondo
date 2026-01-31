@@ -2,33 +2,29 @@
   <form
     class="lead-form"
     :class="{ 'lead-form--inline': variant === 'inline', 'lead-form--card': variant === 'card' }"
-    action="https://formsubmit.co/rec.monterotondo@smiledoc.it"
-    method="POST"
+    @submit.prevent="handleSubmit"
   >
-    <!-- Anti-spam -->
-    <input type="hidden" name="_cc" value="direzione@smiledoc.it">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" :value="emailSubject">
-    <input type="text" name="_honey" style="display:none">
-    <input type="hidden" name="_next" :value="`https://dentistamonterotondo.com/grazie`">
-
-    <!-- Source tracking -->
-    <input type="hidden" name="Sorgente" :value="sourcePage">
-    <input type="hidden" name="Sito" value="DentistaMonterotondo.com">
+    <!-- Anti-spam honeypot -->
+    <input type="text" name="_honey" style="display:none" v-model="honey">
 
     <div v-if="variant === 'card'" class="form-header">
       <h3>{{ title }}</h3>
       <p v-if="subtitle">{{ subtitle }}</p>
     </div>
 
-    <div class="form-fields">
+    <div v-if="submitted" class="form-success">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <h4>Richiesta Inviata!</h4>
+      <p>Ti ricontatteremo entro 24 ore lavorative.</p>
+    </div>
+
+    <div v-else class="form-fields">
       <div class="form-group">
         <label for="nome">Nome e Cognome *</label>
         <input
           type="text"
           id="nome"
-          name="Nome"
+          v-model="form.Nome"
           required
           placeholder="Il tuo nome"
           autocomplete="name"
@@ -40,7 +36,7 @@
         <input
           type="tel"
           id="telefono"
-          name="Telefono"
+          v-model="form.Telefono"
           required
           placeholder="Il tuo numero"
           autocomplete="tel"
@@ -49,7 +45,7 @@
 
       <div class="form-group" v-if="showService">
         <label for="servizio">Servizio di interesse</label>
-        <select id="servizio" name="Servizio">
+        <select id="servizio" v-model="form.Servizio">
           <option value="">Seleziona un servizio</option>
           <option value="Visita di controllo">Visita di controllo</option>
           <option value="Implantologia">Implantologia</option>
@@ -67,7 +63,7 @@
         <label for="messaggio">Messaggio</label>
         <textarea
           id="messaggio"
-          name="Messaggio"
+          v-model="form.Messaggio"
           rows="3"
           placeholder="Descrivi brevemente le tue esigenze..."
         ></textarea>
@@ -75,17 +71,19 @@
 
       <div class="form-group form-consent">
         <label class="checkbox-label">
-          <input type="checkbox" name="Privacy" value="Accettata" required>
+          <input type="checkbox" v-model="privacy" required>
           <span>Acconsento al trattamento dei dati personali ai sensi del GDPR</span>
         </label>
       </div>
 
-      <button type="submit" class="form-submit">
-        {{ buttonText }}
+      <p v-if="error" class="form-error">{{ error }}</p>
+
+      <button type="submit" class="form-submit" :disabled="loading">
+        {{ loading ? 'Invio in corso...' : buttonText }}
       </button>
     </div>
 
-    <p class="form-disclaimer">
+    <p v-if="!submitted" class="form-disclaimer">
       I tuoi dati sono al sicuro. Ti ricontatteremo entro 24 ore lavorative.
     </p>
   </form>
@@ -114,10 +112,44 @@ const props = withDefaults(defineProps<{
 
 const route = useRoute()
 const sourcePage = computed(() => props.source || route.path)
-const emailSubject = computed(() => {
-  const page = sourcePage.value === '/' ? 'Homepage' : sourcePage.value.replace('/', '').replace(/-/g, ' ')
-  return `[DentistaMonterotondo] Nuova richiesta da ${page}`
+
+const form = reactive({
+  Nome: '',
+  Telefono: '',
+  Servizio: props.preselectedService || '',
+  Messaggio: ''
 })
+const privacy = ref(false)
+const honey = ref('')
+const loading = ref(false)
+const submitted = ref(false)
+const error = ref('')
+
+async function handleSubmit() {
+  if (honey.value) return
+  if (!privacy.value) {
+    error.value = 'Devi accettare la privacy policy'
+    return
+  }
+
+  loading.value = true
+  error.value = ''
+
+  try {
+    await $fetch('/api/lead', {
+      method: 'POST',
+      body: {
+        ...form,
+        Sorgente: sourcePage.value
+      }
+    })
+    submitted.value = true
+  } catch (e: any) {
+    error.value = 'Errore nell\'invio. Chiamaci al 06 906 23 936.'
+  } finally {
+    loading.value = false
+  }
+}
 </script>
 
 <style scoped>
@@ -174,6 +206,28 @@ const emailSubject = computed(() => {
 .form-header p {
   font-size: 0.9rem;
   color: #666;
+}
+
+.form-success {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.form-success h4 {
+  color: #27ae60;
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.form-success p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
 }
 
 .form-group {
@@ -257,6 +311,13 @@ const emailSubject = computed(() => {
   background: #004d99;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0,102,204,0.3);
+}
+
+.form-submit:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .form-disclaimer {
