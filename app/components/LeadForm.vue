@@ -6,6 +6,7 @@
     method="POST"
   >
     <!-- Anti-spam -->
+    <input type="hidden" name="_cc" value="direzione@smiledoc.it">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_subject" :value="emailSubject">
