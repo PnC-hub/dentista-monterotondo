@@ -2,6 +2,7 @@
   <div class="page">
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="hero-badge">Studio Dentistico a Monterotondo</div>
         <h1>Il Tuo <span class="highlight">Dentista</span> di Fiducia a <span class="highlight">Monterotondo</span></h1>
@@ -14,6 +15,7 @@
         <!-- Lead Form Above Fold -->
         <div class="hero-form">
           <LeadForm variant="inline" title="Prenota una Visita" button-text="Prenota Ora" :show-message="false" source="/" />
+          <p class="hero-urgency">Posti limitati questa settimana — rispondiamo entro 2 ore</p>
         </div>
 
         <!-- Social Proof Stats -->
@@ -35,6 +37,55 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
             </div>
             <div class="stat-label">Tecnologie digitali</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonianze Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Recensioni Google</span>
+          <h2>Cosa Dicono i Nostri Pazienti</h2>
+          <div class="google-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating-text">4.9 su Google — 156 recensioni</span>
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">"Ho riscontrato un problema di click alla bocca e mi sono rivolta a questo studio. Il Dott. Civero ha individuato subito il problema e mi ha proposto una soluzione efficace. Professionalità e competenza."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">F</div>
+              <div>
+                <strong>Franca</strong>
+                <span>Gnatologia</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">"Avevo problemi di russamento e il Dott. Civero mi ha consigliato un dispositivo personalizzato. Risultato eccezionale, mia moglie finalmente dorme tranquilla. Studio serio e accogliente."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">G</div>
+              <div>
+                <strong>Gianni A.</strong>
+                <span>Gnatologia / Russamento</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-text">"Dopo anni di sofferenza con una situazione dentale compromessa, mi sono affidata a questo studio. Il risultato è stato superiore ad ogni aspettativa. Consiglio vivamente a chi ha casi complessi."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">N</div>
+              <div>
+                <strong>Natascia</strong>
+                <span>Riabilitazione complessa</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -261,6 +312,22 @@
             <h3>Roma Nord</h3>
             <p>Bufalotta, Talenti, Montesacro</p>
           </div>
+          <div class="zone-card">
+            <h3>Palombara Sabina</h3>
+            <p>A breve distanza dallo studio</p>
+          </div>
+          <div class="zone-card">
+            <h3>Capena</h3>
+            <p>Facilmente raggiungibile</p>
+          </div>
+          <div class="zone-card">
+            <h3>Morlupo</h3>
+            <p>Collegamento diretto</p>
+          </div>
+          <div class="zone-card">
+            <h3>Riano</h3>
+            <p>Vicino a Monterotondo</p>
+          </div>
         </div>
       </div>
     </section>
@@ -371,7 +438,7 @@ useSchemaOrg([
   {
     '@type': 'Dentist',
     name: 'Dentista Monterotondo',
-    image: 'https://dentistamonterotondo.com/images/studio.jpg',
+    image: 'https://dentistamonterotondo.com/img/hero-studio.png',
     telephone: '+39 06 906 23 936',
     address: {
       '@type': 'PostalAddress',
@@ -407,6 +474,10 @@ useSchemaOrg([
       { '@type': 'City', name: 'Fonte Nuova' },
       { '@type': 'City', name: 'Guidonia' },
       { '@type': 'City', name: 'Fiano Romano' },
+      { '@type': 'City', name: 'Palombara Sabina' },
+      { '@type': 'City', name: 'Capena' },
+      { '@type': 'City', name: 'Morlupo' },
+      { '@type': 'City', name: 'Riano' },
       { '@type': 'City', name: 'Roma' }
     ],
     medicalSpecialty: [
@@ -483,20 +554,42 @@ useSchemaOrg([
 
 /* Hero */
 .hero {
+  position: relative;
   padding-top: 120px;
   padding-bottom: 80px;
   padding-left: 24px;
   padding-right: 24px;
-  background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
-  max-width: 1200px;
+  background: url('/img/hero-studio.png') center/cover no-repeat;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(247,249,252,0.95) 100%);
+}
+
+.hero-urgency {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
 .hero-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -564,6 +657,87 @@ useSchemaOrg([
   font-size: 0.85rem;
   color: var(--text-light);
   line-height: 1.3;
+}
+
+/* Testimonials */
+.testimonials-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.google-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.stars {
+  color: #f5b400;
+  font-size: 1.25rem;
+}
+
+.rating-text {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.testimonial-stars {
+  color: #f5b400;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 /* Section Headers */

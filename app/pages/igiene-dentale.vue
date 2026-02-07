@@ -176,7 +176,14 @@ useSchemaOrg([
       },
       telephone: '+39 06 906 23 936'
     }
-  }
+  },
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: 'Servizi', item: '/#servizi' },
+      { name: 'Igiene Dentale', item: '/igiene-dentale' }
+    ]
+  })
 ])
 </script>
 

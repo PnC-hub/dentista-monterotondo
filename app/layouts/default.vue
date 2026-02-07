@@ -29,6 +29,11 @@
     <!-- Cookie Banner -->
     <CookieBanner />
 
+    <!-- Lead Generation Components -->
+    <ExitPopup />
+    <StickyCta />
+    <WhatsAppButton />
+
     <!-- Main Content -->
     <main>
       <slot />

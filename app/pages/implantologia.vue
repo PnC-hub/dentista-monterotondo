@@ -198,7 +198,14 @@ useSchemaOrg([
         }
       }
     ]
-  }
+  },
+  defineBreadcrumb({
+    itemListElement: [
+      { name: 'Home', item: '/' },
+      { name: 'Servizi', item: '/#servizi' },
+      { name: 'Implantologia', item: '/implantologia' }
+    ]
+  })
 ])
 </script>
 

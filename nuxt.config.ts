@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://dentistamonterotondo.com' },
         { property: 'og:locale', content: 'it_IT' },
-        { property: 'og:image', content: 'https://dentistamonterotondo.com/images/og-image.jpg' },
+        { property: 'og:image', content: 'https://dentistamonterotondo.com/img/og-image.png' },
         { property: 'og:site_name', content: 'Dentista Monterotondo' },
         { name: 'geo.region', content: 'IT-RM' },
         { name: 'geo.placename', content: 'Monterotondo' },
@@ -86,8 +86,8 @@ export default defineNuxtConfig({
       type: 'Dentist',
       name: 'Dentista Monterotondo',
       url: 'https://dentistamonterotondo.com',
-      logo: 'https://dentistamonterotondo.com/images/logo.png',
-      image: 'https://dentistamonterotondo.com/images/studio.jpg',
+      logo: 'https://dentistamonterotondo.com/img/og-image.png',
+      image: 'https://dentistamonterotondo.com/img/hero-studio.png',
       telephone: '+39 06 906 23 936',
       address: {
         streetAddress: 'Via Monte Circeo 12',
@@ -110,6 +110,10 @@ export default defineNuxtConfig({
         'Fonte Nuova',
         'Guidonia',
         'Fiano Romano',
+        'Palombara Sabina',
+        'Capena',
+        'Morlupo',
+        'Riano',
         'Roma Nord'
       ]
     }

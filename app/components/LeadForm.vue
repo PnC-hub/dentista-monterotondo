@@ -144,6 +144,15 @@ async function handleSubmit() {
       }
     })
     submitted.value = true
+
+    // GA4 event tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'generate_lead', {
+        event_category: 'form',
+        event_label: sourcePage.value,
+        service: form.Servizio || 'non specificato'
+      })
+    }
   } catch (e: any) {
     error.value = 'Errore nell\'invio. Chiamaci al 06 906 23 936.'
   } finally {
