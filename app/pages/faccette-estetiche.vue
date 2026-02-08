@@ -37,6 +37,17 @@
               e potrai provare un mock-up direttamente in bocca.
             </p>
 
+            <div class="before-after-section">
+              <h3>Prima e Dopo le Faccette</h3>
+              <p>Confronta il risultato: trascina il cursore per vedere la trasformazione</p>
+              <BeforeAfter
+                before-image="/img/smile-before.png"
+                after-image="/img/smile-after.png"
+                before-label="Prima"
+                after-label="Dopo"
+              />
+            </div>
+
             <h3>Quando Scegliere le Faccette</h3>
             <ul class="feature-list">
               <li><strong>Denti macchiati</strong> resistenti allo sbiancamento (tetracicline, fluorosi)</li>
@@ -203,6 +214,9 @@ useSchemaOrg([
 .cta-section { background: var(--primary); padding: 60px 0; text-align: center; }
 .cta-section h2 { color: white; font-size: 2rem; margin-bottom: 0.75rem; }
 .cta-section p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 1.5rem; }
+.before-after-section { margin: 2.5rem 0; }
+.before-after-section h3 { font-size: 1.35rem; color: var(--secondary); margin-bottom: 0.5rem; }
+.before-after-section p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; }
 @media (max-width: 992px) { .content-grid { grid-template-columns: 1fr; } .sidebar { position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } .info-cards { grid-template-columns: 1fr; } }
 @media (max-width: 768px) { .service-hero h1 { font-size: 2rem; } .hero-subtitle { font-size: 1.1rem; } }
 </style>
