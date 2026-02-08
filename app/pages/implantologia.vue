@@ -70,7 +70,7 @@
               <li><strong>Tecnologia 3D in sede</strong> - TAC Cone Beam per diagnosi e pianificazione precise</li>
               <li><strong>Chirurgia guidata</strong> - Interventi mini-invasivi e predicibili</li>
               <li><strong>Materiali certificati</strong> - Utilizziamo solo impianti di marche leader</li>
-              <li><strong>Esperienza</strong> - Team specializzato con anni di esperienza</li>
+              <li><strong>Esperienza</strong> - Team esperto con anni di esperienza</li>
               <li><strong>Garanzia</strong> - Tutti i nostri lavori sono garantiti</li>
             </ul>
 

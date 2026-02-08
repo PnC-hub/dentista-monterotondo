@@ -118,7 +118,7 @@
             <div class="faq-item">
               <h4>Mi fate pagare la visita di controllo?</h4>
               <p>
-                Contattaci direttamente per informazioni su tariffe e promozioni disponibili. Vogliamo che
+                Contattaci direttamente per informazioni su tariffe e piani di pagamento. Vogliamo che
                 tutti i pazienti possano accedere ai nostri servizi diagnostici.
               </p>
             </div>

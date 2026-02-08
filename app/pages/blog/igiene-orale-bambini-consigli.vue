@@ -138,14 +138,14 @@
 
           <p>Con le giuste abitudini, controlli regolari e un approccio positivo all'odontoiatria, potete aiutare vostro figlio a mantenere un sorriso sano per tutta la vita.</p>
 
-          <p>Nel nostro studio di Monterotondo, siamo specializzati nell'odontoiatria pediatrica e ci impegniamo a creare esperienze positive per i nostri piccoli pazienti. Contattaci per programmare la prima visita del tuo bambino o per ricevere consigli personalizzati sulla sua igiene orale.</p>
+          <p>Nel nostro studio di Monterotondo, siamo esperti in odontoiatria pediatrica e ci impegniamo a creare esperienze positive per i nostri piccoli pazienti. Contattaci per programmare la prima visita del tuo bambino o per ricevere consigli personalizzati sulla sua igiene orale.</p>
 
           <div class="article-cta">
             <LeadForm variant="card" title="Prenota la Prima Visita del Tuo Bambino" subtitle="Creiamo esperienze positive fin dalla prima infanzia" button-text="Contattaci Ora" :show-message="true" source="/blog/igiene-orale-bambini-consigli" />
           </div>
         </article>
         <aside class="article-sidebar">
-          <LeadForm variant="card" title="Prenota una Visita" subtitle="Odontoiatria pediatrica specializzata" button-text="Prenota Ora" :show-message="false" source="/blog/igiene-orale-bambini-consigli" />
+          <LeadForm variant="card" title="Prenota una Visita" subtitle="Odontoiatria pediatrica dedicata" button-text="Prenota Ora" :show-message="false" source="/blog/igiene-orale-bambini-consigli" />
           <div class="sidebar-card">
             <h4>Contatti</h4>
             <p><a href="tel:+390690623936">06 906 23 936</a></p>
