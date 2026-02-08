@@ -83,6 +83,21 @@ const articles = [
     slug: 'dente-del-giudizio-quando-toglierlo',
     title: 'Dente del Giudizio: Quando Toglierlo',
     excerpt: 'I terzi molari possono causare problemi. Scopri quando è necessaria l\'estrazione, come avviene l\'intervento e il decorso post-operatorio.'
+  },
+  {
+    slug: 'faccette-dentali-guida-completa',
+    title: 'Faccette Dentali: Guida Completa ai Costi e ai Risultati',
+    excerpt: 'Tutto sulle faccette dentali: tipi di faccette (ceramica, disilicato di litio, composito), processo di applicazione, durata e costi a Monterotondo.'
+  },
+  {
+    slug: 'sedazione-cosciente-guida',
+    title: 'Sedazione Cosciente dal Dentista: Come Funziona',
+    excerpt: 'Come funziona la sedazione cosciente per le cure dentali. Protossido d\'azoto, sedazione endovenosa, sicurezza e chi puo beneficiarne.'
+  },
+  {
+    slug: 'all-on-4-vs-protesi-mobile',
+    title: 'All-on-4 vs Protesi Mobile: Confronto Completo',
+    excerpt: 'Confronto dettagliato tra impianti All-on-4 per denti fissi e protesi mobile tradizionale. Vantaggi, svantaggi, costi e quale scegliere.'
   }
 ]
 </script>

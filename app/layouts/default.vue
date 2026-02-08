@@ -9,7 +9,21 @@
           </NuxtLink>
         </div>
         <nav class="nav" :class="{ 'nav-open': menuOpen }">
-          <NuxtLink to="/#servizi" @click="menuOpen = false">Servizi</NuxtLink>
+          <div class="nav-dropdown" @mouseenter="servDropdown = true" @mouseleave="servDropdown = false">
+            <NuxtLink to="/#servizi" @click="menuOpen = false">Servizi</NuxtLink>
+            <div v-show="servDropdown" class="dropdown-menu">
+              <NuxtLink to="/implantologia" @click="menuOpen = false; servDropdown = false">Implantologia</NuxtLink>
+              <NuxtLink to="/ortodonzia" @click="menuOpen = false; servDropdown = false">Ortodonzia</NuxtLink>
+              <NuxtLink to="/estetica-dentale" @click="menuOpen = false; servDropdown = false">Estetica Dentale</NuxtLink>
+              <NuxtLink to="/faccette-estetiche" @click="menuOpen = false; servDropdown = false">Faccette Estetiche</NuxtLink>
+              <NuxtLink to="/sedazione-cosciente" @click="menuOpen = false; servDropdown = false">Sedazione Cosciente</NuxtLink>
+              <NuxtLink to="/riabilitazione-completa" @click="menuOpen = false; servDropdown = false">Riabilitazione Completa</NuxtLink>
+              <NuxtLink to="/igiene-dentale" @click="menuOpen = false; servDropdown = false">Igiene Dentale</NuxtLink>
+              <NuxtLink to="/endodonzia" @click="menuOpen = false; servDropdown = false">Endodonzia</NuxtLink>
+              <NuxtLink to="/odontoiatria-pediatrica" @click="menuOpen = false; servDropdown = false">Pediatrica</NuxtLink>
+              <NuxtLink to="/tecnologie" @click="menuOpen = false; servDropdown = false">Tecnologie</NuxtLink>
+            </div>
+          </div>
           <NuxtLink to="/#perche-noi" @click="menuOpen = false">Chi Siamo</NuxtLink>
           <NuxtLink to="/blog" @click="menuOpen = false">Blog</NuxtLink>
           <NuxtLink to="/#contatti" @click="menuOpen = false">Contatti</NuxtLink>
@@ -58,10 +72,14 @@
             <ul>
               <li><NuxtLink to="/implantologia">Implantologia</NuxtLink></li>
               <li><NuxtLink to="/ortodonzia">Ortodonzia</NuxtLink></li>
+              <li><NuxtLink to="/faccette-estetiche">Faccette Estetiche</NuxtLink></li>
+              <li><NuxtLink to="/sedazione-cosciente">Sedazione Cosciente</NuxtLink></li>
+              <li><NuxtLink to="/riabilitazione-completa">Riabilitazione Completa</NuxtLink></li>
               <li><NuxtLink to="/igiene-dentale">Igiene Dentale</NuxtLink></li>
               <li><NuxtLink to="/estetica-dentale">Estetica Dentale</NuxtLink></li>
               <li><NuxtLink to="/endodonzia">Endodonzia</NuxtLink></li>
               <li><NuxtLink to="/odontoiatria-pediatrica">Pediatrica</NuxtLink></li>
+              <li><NuxtLink to="/tecnologie">Tecnologie</NuxtLink></li>
             </ul>
           </div>
           <div class="footer-links">
@@ -71,6 +89,8 @@
               <li><NuxtLink to="/blog/come-scegliere-dentista-monterotondo">Scegliere il Dentista</NuxtLink></li>
               <li><NuxtLink to="/blog/quanto-costa-dentista-monterotondo">Costi Dentista</NuxtLink></li>
               <li><NuxtLink to="/blog/paura-del-dentista-come-superarla">Paura del Dentista</NuxtLink></li>
+              <li><NuxtLink to="/blog/faccette-dentali-guida-completa">Faccette Dentali</NuxtLink></li>
+              <li><NuxtLink to="/blog/all-on-4-vs-protesi-mobile">All-on-4 vs Protesi</NuxtLink></li>
             </ul>
           </div>
           <div class="footer-links">
@@ -101,6 +121,7 @@
 
 <script setup lang="ts">
 const menuOpen = ref(false)
+const servDropdown = ref(false)
 
 function resetCookieConsent() {
   localStorage.removeItem('cookie_consent')
@@ -202,6 +223,37 @@ a:hover {
 }
 
 .nav a:hover {
+  color: var(--primary);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  padding: 0.75rem 0;
+  min-width: 220px;
+  z-index: 100;
+  border: 1px solid var(--border);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--primary-light);
   color: var(--primary);
 }
 
@@ -361,6 +413,21 @@ a:hover {
 
   .header-cta {
     display: none;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0.5rem 0 0.5rem 1rem;
+    min-width: auto;
+    background: var(--bg-light);
+    border-radius: 8px;
+    margin-top: 0.5rem;
   }
 
   .footer-content {

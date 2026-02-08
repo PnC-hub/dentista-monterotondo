@@ -181,6 +181,62 @@
       </div>
     </section>
 
+    <!-- Trattamenti Premium Section -->
+    <section class="premium-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Eccellenza Odontoiatrica</span>
+          <h2>Trattamenti Premium per Casi Complessi</h2>
+          <p>Soluzioni avanzate per chi cerca il massimo in estetica, comfort e risultati duraturi</p>
+        </div>
+        <div class="premium-grid">
+          <NuxtLink to="/faccette-estetiche" class="premium-card">
+            <div class="premium-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="premium-content">
+              <h3>Faccette Estetiche e Smile Makeover</h3>
+              <p>Trasforma il tuo sorriso con faccette in ceramica, disilicato di litio e composito. Risultati naturali e duraturi grazie allo Smile Design digitale.</p>
+              <span class="premium-link">Scopri le faccette estetiche →</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/sedazione-cosciente" class="premium-card">
+            <div class="premium-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <div class="premium-content">
+              <h3>Sedazione Cosciente</h3>
+              <p>Cure dentali senza paura con protossido d'azoto e sedazione endovenosa. Ideale per odontofobici e interventi complessi in totale serenità.</p>
+              <span class="premium-link">Scopri la sedazione cosciente →</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/riabilitazione-completa" class="premium-card">
+            <div class="premium-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="premium-content">
+              <h3>Riabilitazione Completa — Denti Fissi</h3>
+              <p>Impianti All-on-4 e All-on-6 per tornare a sorridere con denti fissi in giornata. Carico immediato con materiali di alta qualità.</p>
+              <span class="premium-link">Scopri la riabilitazione completa →</span>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink to="/tecnologie" class="premium-card">
+            <div class="premium-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            </div>
+            <div class="premium-content">
+              <h3>Tecnologie Digitali Avanzate</h3>
+              <p>CBCT, scanner intraorale 3D, chirurgia computer-guidata e laser per trattamenti precisi, mini-invasivi e con tempi ridotti.</p>
+              <span class="premium-link">Scopri le nostre tecnologie →</span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
     <!-- Perché Sceglierci Section -->
     <section class="about-section" id="perche-noi">
       <div class="container">
@@ -845,6 +901,110 @@ useSchemaOrg([
   border-radius: 50%;
 }
 
+/* Premium Section */
+.premium-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0a1628 0%, #1a1a2e 50%, #0d2137 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0,102,204,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(0,102,204,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.premium-section .section-header {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-section .section-label {
+  color: #c9a96e;
+}
+
+.premium-section .section-header h2 {
+  color: white;
+}
+
+.premium-section .section-header p {
+  color: rgba(255,255,255,0.7);
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.premium-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(0,102,204,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.premium-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: linear-gradient(135deg, rgba(0,102,204,0.15) 0%, rgba(0,102,204,0.05) 100%);
+  border: 1px solid rgba(0,102,204,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4da3ff;
+}
+
+.premium-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.premium-content p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.premium-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4da3ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.premium-card:hover .premium-link {
+  color: #c9a96e;
+}
+
 /* About Section */
 .about-section {
   padding: 80px 0;
@@ -1105,6 +1265,10 @@ useSchemaOrg([
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .premium-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1124,6 +1288,11 @@ useSchemaOrg([
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .premium-card {
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .about-stats {

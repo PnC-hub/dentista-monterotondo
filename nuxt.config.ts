@@ -27,7 +27,7 @@ export default defineNuxtConfig({
           name: 'description',
           content: 'Cerchi un dentista a Monterotondo? Studio dentistico in Via Monte Circeo 12 con tecnologie digitali avanzate. Implantologia, ortodonzia, igiene dentale. Chiama 06 906 23 936'
         },
-        { name: 'keywords', content: 'dentista monterotondo, studio dentistico monterotondo, dentista via monte circeo, implantologia monterotondo, ortodonzia monterotondo, dentista roma nord, dentista mentana, dentista fonte nuova, igiene dentale monterotondo' },
+        { name: 'keywords', content: 'dentista monterotondo, studio dentistico monterotondo, dentista via monte circeo, implantologia monterotondo, ortodonzia monterotondo, dentista roma nord, dentista mentana, dentista fonte nuova, igiene dentale monterotondo, faccette dentali monterotondo, smile makeover roma nord, sedazione cosciente monterotondo, dentista senza dolore, all on 4 monterotondo, denti fissi monterotondo, riabilitazione orale completa, tecnologie dentali avanzate' },
         { property: 'og:title', content: 'Dentista Monterotondo | Studio Dentistico | Cure Dentali di Qualità' },
         { property: 'og:description', content: 'Studio dentistico a Monterotondo in Via Monte Circeo 12. Implantologia, ortodonzia, igiene dentale con tecnologie digitali avanzate. Chiama 06 906 23 936' },
         { property: 'og:type', content: 'website' },
@@ -74,6 +74,13 @@ export default defineNuxtConfig({
       { loc: '/blog/igiene-orale-bambini-consigli', priority: 0.7, changefreq: 'monthly' },
       { loc: '/blog/sbiancamento-denti-professionale', priority: 0.7, changefreq: 'monthly' },
       { loc: '/blog/dente-del-giudizio-quando-toglierlo', priority: 0.7, changefreq: 'monthly' },
+      { loc: '/faccette-estetiche', priority: 0.9, changefreq: 'monthly' },
+      { loc: '/sedazione-cosciente', priority: 0.9, changefreq: 'monthly' },
+      { loc: '/riabilitazione-completa', priority: 0.9, changefreq: 'monthly' },
+      { loc: '/tecnologie', priority: 0.8, changefreq: 'monthly' },
+      { loc: '/blog/faccette-dentali-guida-completa', priority: 0.7, changefreq: 'monthly' },
+      { loc: '/blog/sedazione-cosciente-guida', priority: 0.7, changefreq: 'monthly' },
+      { loc: '/blog/all-on-4-vs-protesi-mobile', priority: 0.7, changefreq: 'monthly' },
     ]
   },
 
@@ -145,6 +152,13 @@ export default defineNuxtConfig({
         '/blog/igiene-orale-bambini-consigli',
         '/blog/sbiancamento-denti-professionale',
         '/blog/dente-del-giudizio-quando-toglierlo',
+        '/faccette-estetiche',
+        '/sedazione-cosciente',
+        '/riabilitazione-completa',
+        '/tecnologie',
+        '/blog/faccette-dentali-guida-completa',
+        '/blog/sedazione-cosciente-guida',
+        '/blog/all-on-4-vs-protesi-mobile',
         '/grazie',
         '/privacy',
         '/cookie-policy'
