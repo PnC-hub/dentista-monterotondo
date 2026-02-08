@@ -12,10 +12,10 @@
       <p v-if="subtitle">{{ subtitle }}</p>
     </div>
 
-    <div v-if="submitted" class="form-success">
+    <div v-if="submitted" class="form-success" role="status" aria-live="polite">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
       <h4>Richiesta Inviata!</h4>
-      <p>Ti ricontatteremo entro 24 ore lavorative.</p>
+      <p>Ti ricontatteremo entro 24 ore lavorative. Per urgenze chiama il <a href="tel:+390690623936">06 906 23 936</a>.</p>
     </div>
 
     <div v-else class="form-fields">
@@ -54,6 +54,9 @@
           <option value="Estetica dentale">Estetica dentale</option>
           <option value="Endodonzia">Endodonzia</option>
           <option value="Odontoiatria pediatrica">Odontoiatria pediatrica</option>
+          <option value="Faccette estetiche">Faccette estetiche</option>
+          <option value="Sedazione cosciente">Sedazione cosciente</option>
+          <option value="Riabilitazione completa">Riabilitazione completa</option>
           <option value="Urgenza">Urgenza dentale</option>
           <option value="Altro">Altro</option>
         </select>
@@ -124,8 +127,16 @@ const honey = ref('')
 const loading = ref(false)
 const submitted = ref(false)
 const error = ref('')
+const submitCount = ref(0)
+const lastSubmitTime = ref(0)
 
 async function handleSubmit() {
+  const now = Date.now()
+  if (submitCount.value >= 3 && now - lastSubmitTime.value < 300000) {
+    error.value = 'Troppe richieste. Riprova tra qualche minuto oppure chiamaci al 06 906 23 936.'
+    return
+  }
+
   if (honey.value) return
   if (!privacy.value) {
     error.value = 'Devi accettare la privacy policy'
@@ -144,6 +155,8 @@ async function handleSubmit() {
       }
     })
     submitted.value = true
+    submitCount.value++
+    lastSubmitTime.value = Date.now()
 
     // GA4 event tracking
     if (typeof window !== 'undefined' && (window as any).gtag) {

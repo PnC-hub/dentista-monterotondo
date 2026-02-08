@@ -96,7 +96,7 @@
 
           <p>Non permettere alla paura di compromettere la salute del tuo sorriso. Contattaci per una prima visita conoscitiva: saremo felici di accompagnarti in questo percorso con pazienza, comprensione e professionalità.</p>
 
-          <p>Il tuo sorriso merita le migliori cure, e tu meriti di riceverle in totale serenità.</p>
+          <p>Il tuo sorriso merita cure di alta qualità, e tu meriti di riceverle in totale serenità.</p>
 
           <div class="article-cta">
             <LeadForm variant="card" title="Hai Domande sulla Gestione dell'Ansia?" subtitle="Contattaci per una Consulenza Personalizzata" button-text="Contattaci Ora" :show-message="true" source="/blog/paura-del-dentista-come-superarla" />

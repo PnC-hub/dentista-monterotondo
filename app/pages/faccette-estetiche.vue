@@ -41,8 +41,8 @@
               <h3>Prima e Dopo le Faccette</h3>
               <p>Confronta il risultato: trascina il cursore per vedere la trasformazione</p>
               <BeforeAfter
-                before-image="/img/smile-before.png"
-                after-image="/img/smile-after.png"
+                before-image="/img/smile-before.webp"
+                after-image="/img/smile-after.webp"
                 before-label="Prima"
                 after-label="Dopo"
               />

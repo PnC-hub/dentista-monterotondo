@@ -64,7 +64,7 @@
           </ul>
 
           <h3>Trattamento Combinato</h3>
-          <p>Molti studi, incluso il nostro, propongono un approccio combinato: una seduta in studio per ottenere risultati immediati, seguita da un periodo di mantenimento domiciliare con le mascherine personalizzate. Questo protocollo offre i migliori risultati sia in termini di tonalità raggiunta che di durata.</p>
+          <p>Molti studi, incluso il nostro, propongono un approccio combinato: una seduta in studio per ottenere risultati immediati, seguita da un periodo di mantenimento domiciliare con le mascherine personalizzate. Questo protocollo offre risultati ottimali sia in termini di tonalità raggiunta che di durata.</p>
 
           <h2>Sbiancamento Professionale vs Prodotti da Banco</h2>
 

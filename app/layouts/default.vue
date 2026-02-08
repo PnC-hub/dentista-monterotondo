@@ -111,7 +111,7 @@
             <span>|</span>
             <a href="#" @click.prevent="resetCookieConsent">Gestisci Cookie</a>
           </div>
-          <p>Direttore Sanitario: Dott. Piernatale Civero</p>
+          <p>Dir. San. Dott. Piernatale Civero - Aut. San. n. 109 del 16/03/2016</p>
           <p>Smiledoc S.r.l. - P.IVA 15131801001 - Via Monte Circeo 12, 00015 Monterotondo (RM)</p>
         </div>
       </div>
@@ -130,8 +130,6 @@ function resetCookieConsent() {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   --primary: #0066cc;
   --primary-light: #e6f0fa;

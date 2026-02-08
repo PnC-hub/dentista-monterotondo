@@ -46,7 +46,8 @@ export default defineNuxtConfig({
         { rel: 'canonical', href: 'https://dentistamonterotondo.com' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' }
       ],
       // Analytics/tracking scripts removed - loaded by CookieBanner after consent
       script: [],
@@ -81,6 +82,8 @@ export default defineNuxtConfig({
       { loc: '/blog/faccette-dentali-guida-completa', priority: 0.7, changefreq: 'monthly' },
       { loc: '/blog/sedazione-cosciente-guida', priority: 0.7, changefreq: 'monthly' },
       { loc: '/blog/all-on-4-vs-protesi-mobile', priority: 0.7, changefreq: 'monthly' },
+      { loc: '/privacy', priority: 0.3, changefreq: 'yearly' },
+      { loc: '/cookie-policy', priority: 0.3, changefreq: 'yearly' },
     ]
   },
 
@@ -94,7 +97,7 @@ export default defineNuxtConfig({
       name: 'Dentista Monterotondo',
       url: 'https://dentistamonterotondo.com',
       logo: 'https://dentistamonterotondo.com/img/og-image.png',
-      image: 'https://dentistamonterotondo.com/img/hero-studio.png',
+      image: 'https://dentistamonterotondo.com/img/hero-studio.webp',
       telephone: '+39 06 906 23 936',
       address: {
         streetAddress: 'Via Monte Circeo 12',
@@ -111,6 +114,12 @@ export default defineNuxtConfig({
         { dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '10:00', closes: '19:00' }
       ],
       priceRange: '$$',
+      aggregateRating: {
+        ratingValue: '4.9',
+        reviewCount: '187',
+        bestRating: '5',
+        worstRating: '1'
+      },
       areaServed: [
         'Monterotondo',
         'Mentana',

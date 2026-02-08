@@ -17,11 +17,18 @@
 const showBanner = ref(false)
 
 onMounted(() => {
-  const consent = localStorage.getItem('cookie_consent')
-  if (!consent) {
+  const raw = localStorage.getItem('cookie_consent')
+  if (!raw) {
     showBanner.value = true
   } else {
-    applyConsent(JSON.parse(consent))
+    const consent = JSON.parse(raw)
+    const sixMonthsMs = 180 * 24 * 60 * 60 * 1000
+    if (consent.timestamp && Date.now() - consent.timestamp > sixMonthsMs) {
+      localStorage.removeItem('cookie_consent')
+      showBanner.value = true
+    } else {
+      applyConsent(consent)
+    }
   }
 })
 
@@ -146,14 +153,14 @@ function loadFBPixel() {
 }
 
 .cookie-btn--reject {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .cookie-btn--reject:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: white;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .cookie-btn--accept {

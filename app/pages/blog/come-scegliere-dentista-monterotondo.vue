@@ -18,8 +18,8 @@
           <p>Ma l'iscrizione all'albo è solo il punto di partenza. Valuta anche:</p>
 
           <ul>
-            <li><strong>Formazione universitaria:</strong> Dove si è laureato il dentista? Ha frequentato scuole di specializzazione?</li>
-            <li><strong>Specializzazioni:</strong> Se hai bisogno di trattamenti specifici (implantologia, ortodonzia, endodonzia), cerca un dentista con formazione avanzata in quel campo</li>
+            <li><strong>Formazione universitaria:</strong> Dove si è laureato il dentista? Ha frequentato percorsi di formazione post-universitaria?</li>
+            <li><strong>Competenze specifiche:</strong> Se hai bisogno di trattamenti specifici (implantologia, ortodonzia, endodonzia), cerca un dentista con formazione avanzata in quel campo</li>
             <li><strong>Formazione continua:</strong> L'odontoiatria evolve rapidamente. Un buon professionista partecipa regolarmente a corsi di aggiornamento e congressi</li>
             <li><strong>Certificazioni:</strong> Alcune procedure avanzate (sedazione cosciente, laser odontoiatrico) richiedono certificazioni specifiche</li>
             <li><strong>Affiliazioni professionali:</strong> L'appartenenza a società scientifiche (SIDP per la parodontologia, SIDO per l'ortodonzia, ecc.) è indice di serietà</li>

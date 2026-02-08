@@ -21,11 +21,11 @@
         <!-- Social Proof Stats -->
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-number">15+</div>
+            <div class="stat-number">25+</div>
             <div class="stat-label">Anni di esperienza</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">2000+</div>
+            <div class="stat-number">10.000+</div>
             <div class="stat-label">Pazienti soddisfatti</div>
           </div>
           <div class="stat-item">
@@ -50,7 +50,7 @@
           <h2>Cosa Dicono i Nostri Pazienti</h2>
           <div class="google-rating">
             <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="rating-text">4.9 su Google — 156 recensioni</span>
+            <span class="rating-text">4.9 su Google — 187 recensioni</span>
           </div>
         </div>
         <div class="testimonials-grid">
@@ -251,8 +251,8 @@
             </p>
             <p>
               Crediamo che ogni paziente meriti cure di qualità in un ambiente confortevole.
-              Per questo abbiamo investito nelle migliori tecnologie e nella formazione continua
-              del nostro team di specialisti.
+              Per questo abbiamo investito in tecnologie all'avanguardia e nella formazione continua
+              del nostro team di esperti.
             </p>
             <div class="about-stats">
               <div class="stat">
@@ -494,7 +494,7 @@ useSchemaOrg([
   {
     '@type': 'Dentist',
     name: 'Dentista Monterotondo',
-    image: 'https://dentistamonterotondo.com/img/hero-studio.png',
+    image: 'https://dentistamonterotondo.com/img/hero-studio.webp',
     telephone: '+39 06 906 23 936',
     address: {
       '@type': 'PostalAddress',
@@ -615,7 +615,7 @@ useSchemaOrg([
   padding-bottom: 80px;
   padding-left: 24px;
   padding-right: 24px;
-  background: url('/img/hero-studio.png') center/cover no-repeat;
+  background: url('/img/hero-studio.webp') center/cover no-repeat;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
